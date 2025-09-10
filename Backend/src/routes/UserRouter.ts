@@ -16,7 +16,10 @@ router.get("/users", getAll);
 router.delete("/user/:username", deleteUserByPK);
 router.post("/sendResetPassword", sendResetPassword);
 
-router.use(verifyResetToken);
-router.get("/enterData", enterData); 
-router.post("/resetForgottenPassword", resetForgottenPassword);
+router.get("/enterData", verifyResetToken, enterData);
+router.post(
+  "/resetForgottenPassword",
+  verifyResetToken,
+  resetForgottenPassword,
+);
 export default router;

@@ -199,6 +199,11 @@ const AdminMenuItems: IAppMenuItem[] = [
         label: "Admin Processes",
         link: "/me/processes",
         Icon: () => <IntegrationInstructionsIcon/>,
+    },
+    {
+        label: "User Management",
+        link: "/me/usermanagement",
+        Icon: () => <GroupIcon/>,
     }
 ];
 

@@ -80,9 +80,12 @@ const AllTrainingStudent = lazy(() => import('src/pages/Student/AllTraining'));
 const Progress = lazy(() => import('src/pages/Student/Progress'));
 
 const AddFaculty = lazy(() => import('src/pages/Admin/AddFaculty'));
+const UserManagement = lazy(() => import('src/pages/Admin/UserManagementDashboard/UserManagement'));
 const Charts = lazy(() => import('src/pages/university/Charts'));
 const ForgetPassword = lazy(() => import('src/pages/ForgetPassword'));
 const ResetPassword = lazy(() => import('src/pages/resetPassword'));
+
+
 
 import { UserRole } from '../constants/auth';
 
@@ -120,6 +123,7 @@ const AppRoutes: FC = () => {
 
           <Route element={<ProtectedRoute allowedRoles={[SuperAdmin]} />}>
             <Route path="processes" element={<AddFaculty />} />
+            <Route path="usermanagement" element={<UserManagement />} />
           </Route>
 
           <Route
